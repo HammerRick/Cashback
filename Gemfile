@@ -22,6 +22,8 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 # For simple url_validation
 gem "validate_url"
+# Simple pagination
+gem 'pagy', '~> 3.8.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

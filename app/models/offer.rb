@@ -7,7 +7,10 @@ class Offer < ApplicationRecord
   validates :url, url: true
   validates :description, length: { maximum: 500 }
 
-  # gives "https://"" to url if needed
+  attribute :enabled, :boolean, default: -> { false }
+  attribute :premium, :boolean, default: -> { false }
+
+  # gives 'https://' to url if needed
   def url=(url_str)
     unless url_str.blank?
       unless url_str.split(':')[0] == 'http' || url_str.split(':')[0] == 'https'
