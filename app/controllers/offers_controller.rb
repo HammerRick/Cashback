@@ -1,5 +1,5 @@
 class OffersController < ApplicationController
-  before_action :set_offer, only: [:show, :edit, :update, :destroy]
+  before_action :set_offer, only: [:switch, :edit, :update, :destroy]
 
   # GET /offers
   # GET /offers.json
@@ -7,9 +7,17 @@ class OffersController < ApplicationController
     @offers = Offer.all
   end
 
-  # GET /offers/1
-  # GET /offers/1.json
-  def show
+  # GET /offers/1/switch
+  def switch
+    @offer.toggle(:enabled)
+    save_worked = @offer.save
+
+    if save_worked
+      flash[:success] = "#{@offer.advertiser_name} sucefully updated"
+    else
+      flash[:error] = "#{@offer.advertiser_name} update failed   with errors: #{@offer.errors.messages}"
+    end
+    redirect_to action: 'index'
   end
 
   # GET /offers/new
