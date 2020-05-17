@@ -24,6 +24,8 @@ gem 'jquery-rails'
 gem "validate_url"
 # Simple pagination
 gem 'pagy', '~> 3.8.1'
+# Make cron jobs
+gem 'whenever', require: false
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
