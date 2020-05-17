@@ -6,11 +6,19 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
+
 module Cashback
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
+    # sets correct timezone
+    config.time_zone = 'Brasilia'
+
+    # Set logger
+    Rails.logger = Logger.new(STDOUT)
+    config.logger = ActiveSupport::Logger.new("log/#{Rails.env}.log")
+    
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded after loading
