@@ -1,5 +1,5 @@
 class ShopController < ApplicationController
   def home
-      @offers = Offer.where(enabled: true)
+      @pagy, @offers = pagy(Offer.enabled)
   end
 end
