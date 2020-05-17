@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Offer < ApplicationRecord
   has_and_belongs_to_many :users
 
@@ -9,6 +7,20 @@ class Offer < ApplicationRecord
 
   attribute :enabled, :boolean, default: -> { false }
   attribute :premium, :boolean, default: -> { false }
+
+  scope :enabled, -> { where(enabled: true) }
+  scope :disabled, -> { where(enabled: false) }
+  scope :premium, -> { where(premium: true) }
+
+  def self.status_updater
+    to_enable = Offer.disabled.where('starts_at < :now and ends_at > :now', now: Time.zone.now)
+    to_enable.update_all(enabled: true)
+
+    to_disable = Offer.enabled.where('ends_at < ?', Time.zone.now)
+    to_disable.update_all(enabled: false)
+
+    Rails.logger.info("#{to_enable.count} offers enabled, #{to_disable.count} offers disabled")
+  end
 
   # gives 'https://' to url if needed
   def url=(url_str)
