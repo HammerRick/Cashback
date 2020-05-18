@@ -15,7 +15,7 @@
 
       <p class="card-text"><%= offer.description %></p>
     </div>
-    <% if offer.users.count > 1 %>
+    <% if offer.users.count > 0 %>
     <div class="card-footer">
       <small class="text-muted"> <%= "Users interested: #{offer.users.count}"%> </small>
     </div>
