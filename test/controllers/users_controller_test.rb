@@ -1,4 +1,4 @@
-require 'test_helper'
+  require 'test_helper'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
   setup do
@@ -17,7 +17,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create user" do
     assert_difference('User.count') do
-      post users_url, params: { user: { email: @user.email, password: 'secret', password_confirmation: 'secret', username: @user.username } }
+      post users_url, params: { user: { email: "new_user@com", password: 'secret', password_confirmation: 'secret', username: "new username" } }
     end
 
     assert_redirected_to user_url(User.last)

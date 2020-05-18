@@ -6,6 +6,6 @@ one:
   password_digest: <%= BCrypt::Password.create('secret') %>
 
 two:
-  username: MyString
-  email: MyString
+  username: MyUsername
+  email: MySEmail
   password_digest: <%= BCrypt::Password.create('secret') %>
