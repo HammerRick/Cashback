@@ -12,10 +12,13 @@
 
 ActiveRecord::Schema.define(version: 2020_05_17_210455) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "offers", force: :cascade do |t|
     t.string "advertiser_name", null: false
     t.string "url"
-    t.text "description", limit: 500
+    t.text "description"
     t.date "starts_at"
     t.date "ends_at"
     t.boolean "premium", default: false
