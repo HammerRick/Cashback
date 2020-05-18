@@ -1,18 +1,16 @@
 
 <div class="col-lg-4 col-md-6 mb-4">
   <div class="card h-100">
-    <% logger.info("offer on offer_card: #{offer.inspect}") %>
     <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
     <div class="card-body">
       <h4 class="card-title">
-        <p>Test</p>
+        <%= link_to offer.advertiser_name, offer.url, target: :_blank %>
       </h4>
       <% if offer.premium %>
-        <%= embedded_svg "premium.svg" %>
+        <p> Premium! </p>
       <% end %>
       <p class="card-text"><%= offer.description %></p>
     </div>
-        <%= link_to offer.advertiser_name, offer.url, target: :_blank %>
     <div class="card-footer">
       <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
     </div>
