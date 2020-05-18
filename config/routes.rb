@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     get 'switch', :on => :member
   end
 
+  get 'click/:offer_id', to: 'shop#click', as: 'click'
   # to make ours links more user friendly
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
