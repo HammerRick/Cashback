@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :offers_users
+  has_many :offers_users, dependent: :destroy
   has_many :offers, through: :offers_users
 
   has_secure_password

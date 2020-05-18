@@ -1,5 +1,5 @@
 class Offer < ApplicationRecord
-  has_many :offers_users
+  has_many :offers_users, dependent: :destroy
   has_many :users, through: :offers_users
 
   validates :advertiser_name, uniqueness: true, presence: true

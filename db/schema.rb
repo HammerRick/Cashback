@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2020_05_18_162845) do
     t.index ["advertiser_name"], name: "index_offers_on_advertiser_name", unique: true
   end
 
-  create_table "offers_users", id: false, force: :cascade do |t|
+  create_table "offers_users", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "offer_id", null: false
     t.datetime "created_at", precision: 6, null: false
