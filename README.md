@@ -49,26 +49,26 @@ And now you can visit the site with the URL http://localhost:3000
 ## Observations
 
 Here you can read about some of what I did that wasn't part of the test requirements.
-  - small visual improvements to the admin interface (using bootstrap tables)
+  - small visual improvements to the admin interface (using bootstrap tables).
 
   - Validations on rails and on the database, as a good practice.
 
-  - Authentication, it has a secure password using bcrypt
-  no page requires a user to be logged in
+  - Authentication, it has a secure password using bcrypt.
+  No page requires a user to be logged in
 
   - the front has a counter that shows how many, if any, users clicked on an offer.
 
-  - flash messages showing errors when need and confing user loggin
-  javascript to close those flash messages not implemented
+  - flash messages showing errors when need and confing user loggin.
+  Javascript to close those flash messages not implemented
 
-  - Simple navbar showing a home, username if logged in, showing Log In and Sign Up options if not
+  - Simple navbar showing a home, username if logged in, showing Log In and Sign Up options if not.
 
-  - database change from sqlite to psql, since psql is more robust, and works with heroku.
+  - Database system change from sqlite to psql, since psql is more robust, and works with heroku.
   It's good practice to use the same database system for development and production
 
-  - Logs, so I know how many offers have beem enabled/disabled in each hour
+  - Logs, so I know how many offers have beem enabled/disabled in each hour.
 
-  - Join table create explicitely, with a model and validations, as a good practice
+  - Join table create explicitely, with a model and validations, as a good practice.
 
-  - Deploy on heroku
+  - Deploy on heroku.
   [Take me there](https://secret-reaches-99824.herokuapp.com/)
