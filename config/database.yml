@@ -22,5 +22,4 @@ test:
   database: cashback_test
 
 production:
-  <<: *default
-  database: cashback_production
+  url: <%= ENV['DATABASE_URL'] %>
