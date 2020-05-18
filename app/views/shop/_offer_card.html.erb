@@ -4,12 +4,12 @@
     <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
     <div class="card-body">
       <h4 class="card-title">
-        <%= link_to offer_card.advertiser_name, offer_card.url, target: :_blank %>
+        <%= link_to offer.advertiser_name, offer.url, target: :_blank %>
       </h4>
-      <% if offer_card.premium %>
+      <% if offer.premium %>
         <%= embedded_svg "premium.svg" %>
       <% end %>
-      <p class="card-text"><%= offer_card.description %></p>
+      <p class="card-text"><%= offer.description %></p>
     </div>
     <div class="card-footer">
       <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
