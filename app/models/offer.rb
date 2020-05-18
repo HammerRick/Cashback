@@ -1,5 +1,6 @@
 class Offer < ApplicationRecord
-  has_and_belongs_to_many :users
+  has_many :offers_users
+  has_many :users, through: :offers_users
 
   validates :advertiser_name, uniqueness: true, presence: true
   validates :url, url: true
