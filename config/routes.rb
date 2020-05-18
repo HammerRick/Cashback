@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
   resources :users
-  resources :offers, except: :show do
+  resources :offers do
     get 'switch', :on => :member
   end
 

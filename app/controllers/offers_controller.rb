@@ -7,6 +7,12 @@ class OffersController < ApplicationController
     @offers = Offer.all
   end
 
+  # GET /offers/1
+  # GET /offers/1.json
+  def show
+    @offer = Offer.find params[:id]
+  end
+
   # GET /offers/1/switch
   def switch
     @offer.toggle(:enabled)
