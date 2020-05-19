@@ -31,13 +31,19 @@ cp config/database.yml.sample config/database.yml
 
 Run the following commands to create and setup the database.
 
-```ruby
+```
 bundle install
 bundle exec rake db:create
 bundle exec rake db:setup
 ```
 
-##### 4. Start the Rails server
+##### 4. This updates your local cron for automatic status switch
+
+```
+whenever --update-crontab --set environment=development
+```
+
+##### 5. Start the Rails server
 
 You can start the rails server using the command given below.
 
