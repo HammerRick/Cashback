@@ -1,12 +1,6 @@
-# frozen_string_literal: true
-
 require 'test_helper'
 
 class OfferTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
-
   VALID_OFFER_HASH = {
     advertiser_name: 'WellMartin',
     url: 'this.is.a.url',

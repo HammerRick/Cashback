@@ -64,7 +64,7 @@ Here you can read about some of what I did that wasn't part of the test requirem
 
   - the front has a counter that shows how many, if any, users clicked on an offer.
 
-  - flash messages showing errors when need and confing user loggin.
+  - flash messages showing errors when need and confirming user loggin.
   Javascript to close those flash messages not implemented
 
   - Simple navbar showing a home, username if logged in, showing Log In and Sign Up options if not.
